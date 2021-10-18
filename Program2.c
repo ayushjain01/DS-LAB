@@ -2,7 +2,6 @@
 #include <stdio.h>
 #define SIZE 50
 
-// create struct with person1 variable
 struct Empl {
   char name[SIZE];
   int emplid;
