@@ -7,7 +7,7 @@ struct person {
 };
 int main(){
    struct person *ptr;
-   ptr = (int*) malloc(sizeof(struct person));
+   ptr = (struct person*) malloc(sizeof(struct person));
    printf("Enter first name and age respectively: ");
    scanf("%s %d", (ptr)->fname, &(ptr)->age);
    printf("Name: %s\tAge: %d", (ptr)->fname, (ptr)->age);
