@@ -15,7 +15,8 @@ int main()
     printf("Enter number of students-");
     scanf("%d",&n);
     int i;
-    struct student* students = malloc(n * sizeof(struct student));
+    struct student* students;
+    students = (struct student*)malloc(n * sizeof(struct student));
     for (i = 0; i < n; i++)
     {
 
