@@ -13,11 +13,11 @@ int main() {
   ptr2 = (int*) calloc(n1, sizeof(int));
 printf("Addresses of previously allocated memory using malloc:\n");
   for(i = 0; i < n1; ++i)
-    printf("%pc\n",ptr1 + i);
+    printf("%p\n",ptr1 + i);
 
   printf("Addresses of previously allocated memory using calloc:\n");
   for(i = 0; i < n1; ++i)
-    printf("%pc\n",ptr2 + i);
+    printf("%p\n",ptr2 + i);
 
   printf("\nEnter the new size: ");
   scanf("%d", &n2);
@@ -26,7 +26,7 @@ printf("Addresses of previously allocated memory using malloc:\n");
 
   printf("Addresses of newly allocated memory:\n");
   for(i = 0; i < n2; ++i)
-    printf("%pc\n", ptr3 + i);
+    printf("%p\n", ptr3 + i);
   
 
 
