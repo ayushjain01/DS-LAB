@@ -103,8 +103,10 @@ student *insertany(student *head)
             scanf("%d", &rollposition);
         }
         else
+        {
             printf("\n Wrong value for position - enter 0 for before, 1 for after");
-
+            return head;
+        }
         posptr = searchStudent(head, rollposition);
 
         printf("\n Posptr pointer address->%d and Rollposition is %d", posptr, rollposition);
