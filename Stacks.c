@@ -42,7 +42,7 @@ void display()
     else
     {
         printf("Stack: ");
-        for (int i = top; i >= 0; i--)
+        for (int i = 0; i <= top; i++)
         {
             printf("%d ", mystack[i]);
         }
