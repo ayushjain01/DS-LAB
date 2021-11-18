@@ -1,4 +1,4 @@
-//Refer Infix_Postfix_Algorithm.txt 
+//Refer Postfix_Eval_Algorithm.txt 
 
 #include <stdio.h>
 #include <math.h>
