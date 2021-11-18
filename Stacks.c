@@ -3,106 +3,97 @@
 
 #define SIZE 5
 
-int top;
-int s[SIZE];
-int item;
+int top = -1;
+int mystack[SIZE];
 
-void push()
+void push(int element)
 {
- if(top == SIZE -1)
- {
-     printf("Stack Overlflow\n");
-     return;
- }
- s[++top] = item;
- 
+
+    if (top == SIZE - 1)
+    {
+        printf("\nStack Overflow\n");
+        return;
+    }
+    else
+    {
+        mystack[++top] = element;
+        return;
+    }
 }
+
 int pop()
 {
-    int item_del;
- if(top == -1)
- {
-   return 0;
- }
- item_del = s[top];
- top--;
- return item_del;
+    if (top == -1)
+    {
+        return 0;
+    }
+    else
+    {
+        return mystack[top--];
+    }
 }
+
 void display()
 {
-    int i;
-    if(top == -1)
- {
-   printf("Stack is Empty\n");
-   return ;
- }
- printf("Contents of the Stack :\n");
- for (i = 0; i<=top;i++)
- {
-     printf("%d\n",s[i]);
- }
+    if (top == -1)
+    {
+        printf("\nStack is empty\n");
+    }
+    else
+    {
+        printf("Stack: ");
+        for (int i = top; i >= 0; i--)
+        {
+            printf("%d ", mystack[i]);
+        }
+        printf("\n");
+    }
 }
 
 void peek()
 {
- if(top == -1)
- {
-   printf("Stack Underflow\n");
-   return ;
- }
- printf("Item on top -> %d\n",s[top]);
+    if (top == -1)
+    {
+        printf("\nStack Underflow\n");
+    }
+    printf("Item on top -> %d\n", mystack[top]);
 }
 
-int main() {
-  int item_del, choice;
-  top = -1;
-  for (;;)
-  {
-      printf("Enter the choice -\n1. Push\n2. Pop\n3. Display\n4. Peek\n5. Quit\n");
-      scanf("%d",&choice);
-      switch(choice)
-      {
-          case 1:
-            {
-                printf("Enter element-");
-                scanf("%d",&item);
-                push();
-                break;
-            }
+int main()
+{
+
+    int element, element_deleted, ch;
+
+    while (1)
+    {
+        printf("\nEnter choice-\n");
+        printf("1: Push\n2: Pop\n3: Display\n4: Peek\n5: Exit\n...");
+
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+            printf("\nEnter the element to be pushed: ");
+            scanf("%d", &element);
+            push(element);
+            break;
         case 2:
-            {
-                item_del = pop();
-                if (item_del == 0)
-                {
-                    printf("Stack Underflow\n");
-                }
-                else
-                {
-                    printf("Item Deleted : %d\n",item_del);
-                }
-                break;
-            }
+            element_deleted = pop();
+            if (element_deleted == 0)
+                printf("\nStack Underflow\n");
+            else
+                printf("\nElement Popped is %d\n", element_deleted);
+            break;
         case 3:
-            {
-                display();
-                break;
-            }
+            display();
+            break;
         case 4:
-            {
-                peek();
-                break;
-            }
+            peek();
+            break;
         case 5:
-            {
-                exit(0);
-                break;
-            }
+            exit(0);
         default:
-            {
-                printf("Invalid Choice. Please Try Again");
-            }
+            printf("\nInvalid Choice\n");
         }
-  
-}
-return 0;
+    }
 }
