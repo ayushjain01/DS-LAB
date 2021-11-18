@@ -1,0 +1,13 @@
+1. Push "(" onto STACK, and add ")" to the end of the infix expression.
+2. Traverse the infix expression from left to right and REPEAT the steps 3 to 6 for each element of the infix expression.
+3. If an operand is encountered, add it to the POSTFIX expression.
+4. if a left parenthesis '(' is encountered, push it onto the STACK.
+5. If an operator is encounter, then:
+    POP repeatedly from the STACK and add each operator with higher or same PRIORITY as symbol to the POSTFIX expression.
+    PUSH symbol to the STACK.
+6. If a right parenthesis ')' is encountered, then:
+    Repeatedly POP from the STACK and add to the POSTFIX expression, until a left parenthesis ')' is encountered.
+    POP the left parenthesis.
+7. END.
+
+(Note - only operators and parenthesis are added to the STACK, and the POSTFIX expression is free of the parenthesis)
