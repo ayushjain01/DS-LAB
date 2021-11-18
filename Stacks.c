@@ -50,15 +50,6 @@ void display()
     }
 }
 
-void peek()
-{
-    if (top == -1)
-    {
-        printf("\nStack Underflow\n");
-    }
-    printf("Item on top -> %d\n", mystack[top]);
-}
-
 int main()
 {
 
@@ -67,7 +58,7 @@ int main()
     while (1)
     {
         printf("\nEnter choice-\n");
-        printf("1: Push\n2: Pop\n3: Display\n4: Peek\n5: Exit\n...");
+        printf("1: Push\n2: Pop\n3: Display\n4: Exit\n...");
 
         scanf("%d", &ch);
         switch (ch)
@@ -88,9 +79,6 @@ int main()
             display();
             break;
         case 4:
-            peek();
-            break;
-        case 5:
             exit(0);
         default:
             printf("\nInvalid Choice\n");
