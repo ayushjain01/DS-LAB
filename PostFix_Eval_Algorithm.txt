@@ -1,0 +1,12 @@
+1. Start reading the postfix expression from left to right.
+2. If the element(symbol) is an operand then
+    PUSH it into the stack.
+3. If the element(symbol) is an operator then
+    POP two operands from the stack(OP1,OP2).
+    Evaluate the expression OP1 symbol OP2.
+    PUSH the result into the stack.
+4. If no more elements in the expression then
+    POP the result from the stack.
+   else
+    Go to step 1.
+5. END
