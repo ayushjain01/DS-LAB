@@ -36,7 +36,7 @@ term *create_polynomial(){
             temp = head;
         for(int i = deg-1; i>=0; i--)
         {
-            printf("\nEnter the Coefficient of term 1 (exponent = %d) :",i);
+            printf("\nEnter the Coefficient of term %d (exponent = %d) :",deg-i+1,i);
             scanf("%d",&coeff);
             term *new_term = (term*) malloc(sizeof(term));
             new_term->coeff = coeff;
