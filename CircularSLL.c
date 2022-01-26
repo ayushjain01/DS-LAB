@@ -188,7 +188,7 @@ student *deleteany(student *head, int srollno)
                 head = head->next;
                 lastStudent->next = head;
             }
-            else if (delptr->next == NULL)
+            else if (delptr->next == head)
             {
                 printf("You are deleting the tail node from the linked list.");
                 student *pointer = head;
