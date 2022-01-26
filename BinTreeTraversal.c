@@ -11,6 +11,8 @@ typedef struct node
     struct node *left;
 }node;
 
+int count = 0;
+
 node *create(node *root, int data)
 {
     if (root == NULL)
@@ -19,6 +21,7 @@ node *create(node *root, int data)
         root->left = NULL;
         root->right = NULL;
         root->data = data;
+        count++;
     }
     else
     {
@@ -125,7 +128,8 @@ int main()
             root = NULL;
             printf("\nEnter number of nodes - ");
             scanf("%d",&n);
-            for(i = 1; i <= n; i++)
+            count = 0;
+            while (count <n)
             {
                 printf("\nEnter data for node %d : ", i);
                 scanf("%d",&item);
