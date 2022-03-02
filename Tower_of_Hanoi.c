@@ -1,3 +1,5 @@
+//Refer https://www.cs.cmu.edu/~cburch/survey/recurse/hanoiex.html to visualise program tracing
+
 #include <stdio.h>
 
 int nsteps = 0;
