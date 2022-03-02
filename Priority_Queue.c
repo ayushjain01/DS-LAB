@@ -84,7 +84,7 @@ int main()
                 printf("\nQueue is empty\n");
             }
             else{
-                dequeue(priority);
+                dequeue();
             }    
             break;
         case 3:
