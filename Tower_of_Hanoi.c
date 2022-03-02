@@ -19,7 +19,7 @@ void move(int n, char source, char destination, char temp){
 
 void main(){
     int n;
-    char source = 'A', destination = 'C', temp = 'B';
+    char source = 'A', destination = 'B', temp = 'C';
     printf("\nEnter number of discs : ");
     scanf("%d",&n);
     printf("\nSource : %c\nDestination : %c\nTemp : %c", source, destination,temp);
